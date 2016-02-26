@@ -19,20 +19,22 @@ namespace ErichGame
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         SpriteFont font;
+        List<DisplayText> displayList = new List<DisplayText>();
 
-        DisplayText score1Lbl = new DisplayText(new Vector2(0,0), "SCORE<1>");
-        DisplayText hiScoreLbl = new DisplayText(new Vector2(0,0), "HI-SCORE");
-        DisplayText score2Lbl = new DisplayText(new Vector2(0,0), "SCORE<2>");
-        DisplayText player1Score = new DisplayText(new Vector2(0,0), "0000");
-        DisplayText highScore = new DisplayText(new Vector2(0,0), "0000");
-        DisplayText player2Score = new DisplayText(new Vector2(0,0), "0000");
+        DisplayText score1Lbl = new DisplayText(new Vector2(6, 1), "SCORE<1>");
+        DisplayText hiScoreLbl = new DisplayText(new Vector2(79,1), "HI-SCORE");
+        DisplayText score2Lbl = new DisplayText(new Vector2(151,1), "SCORE<2>");
+        DisplayText player1Score = new DisplayText(new Vector2(23,16), "0000");
+        DisplayText highScore = new DisplayText(new Vector2(87,16), "0000");
+        DisplayText player2Score = new DisplayText(new Vector2(160,16), "0000");
+        DisplayText numLives = new DisplayText(new Vector2(7,232), "3");
+        DisplayText creditLbl = new DisplayText(new Vector2(135,232), "CREDIT");
+        DisplayText numCredit = new DisplayText(new Vector2(191,232), "00");
+
+        //Sprite shipLifeIcon = new Sprite(new Vector2(0,0), ????);
         //Sprite alien = new Sprite(new Vector2(0,0), ????);
         //Sprite shield =  new Sprite(new Vector2(0,0), ????);
         //Sprite player = new Sprite(new Vector2(0,0), ????);
-        DisplayText numLives = new DisplayText(new Vector2(0,0), "3");
-        //Sprite shipLifeIcon = new Sprite(new Vector2(0,0), ????);
-        DisplayText creditLbl = new DisplayText(new Vector2(0,0), "CREDIT");
-        DisplayText numCredit = new DisplayText(new Vector2(0,0), "00");
         //Sprite ufo = new Sprite(new Vector2(0,0), ????);
         //Sprite alienBullet = new Sprite(new Vector2(0,0), ????);
         //Sprite playerBullet = new Sprite(new Vector2(0,0), ????);
@@ -54,7 +56,15 @@ namespace ErichGame
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            displayList.Add(score1Lbl);
+            displayList.Add(hiScoreLbl);
+            displayList.Add(score2Lbl);
+            displayList.Add(player1Score);
+            displayList.Add(highScore);
+            displayList.Add(player2Score);
+            displayList.Add(numLives);
+            displayList.Add(creditLbl);
+            displayList.Add(numCredit);
             base.Initialize();
         }
 
@@ -103,10 +113,12 @@ namespace ErichGame
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
-
+            
             // TODO: Add your drawing code here
-            spriteBatch.Begin();
-            spriteBatch.DrawString(font, "TEST", new Vector2(2, 2), Color.White);
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, null, null);
+            foreach (DisplayText t in displayList) {
+                spriteBatch.DrawString(font, t.getText(), t.getPosition(), Color.White);
+            }
             spriteBatch.End();
 
             base.Draw(gameTime);

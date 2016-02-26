@@ -8,20 +8,21 @@ namespace ErichGame
 {
     class DisplayText : Entity2D
     {
+        public DisplayText(Vector2 pos, string text)
+            : base(pos)
+        {
+            this.setText(text);
+        }
+
+        public DisplayText(int x, int y, string text)
+            : base(x,y)
+        {
+            this.setText(text);
+        }
 
         string text;
-        public DisplayText(int x, int y, string text)
-        {
-            this.text = text;
-            this.pos = new Vector2();
-            this.pos.X = x;
-            this.pos.Y = y;
-        }
-
-        public DisplayText(Vector2 pos, string text)
-        {
-            this.text = text;
-            this.pos = pos;
-        }
+        public string getText() { return text; }
+        public void setText(string text) { this.text = text; }
+   
     }
 }

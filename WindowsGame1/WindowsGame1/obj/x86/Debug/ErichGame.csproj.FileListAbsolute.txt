@@ -5,3 +5,9 @@ c:\users\erich\documents\visual studio 2013\Projects\WindowsGame1\WindowsGame1\W
 c:\users\erich\documents\visual studio 2013\Projects\WindowsGame1\WindowsGame1\WindowsGame1\obj\x86\Debug\WindowsGame1.exe
 c:\users\erich\documents\visual studio 2013\Projects\WindowsGame1\WindowsGame1\WindowsGame1\obj\x86\Debug\WindowsGame1.pdb
 C:\Users\Erich\Documents\Visual Studio 2013\Projects\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\SpaceFont.xnb
+C:\Users\Erich\Documents\Visual Studio 2013\Projects\ErichGame\WindowsGame1\WindowsGame1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Erich\Documents\Visual Studio 2013\Projects\ErichGame\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\SpaceFont.xnb
+C:\Users\Erich\Documents\Visual Studio 2013\Projects\ErichGame\WindowsGame1\WindowsGame1\bin\x86\Debug\WindowsGame1.exe
+C:\Users\Erich\Documents\Visual Studio 2013\Projects\ErichGame\WindowsGame1\WindowsGame1\bin\x86\Debug\WindowsGame1.pdb
+C:\Users\Erich\Documents\Visual Studio 2013\Projects\ErichGame\WindowsGame1\WindowsGame1\obj\x86\Debug\WindowsGame1.exe
+C:\Users\Erich\Documents\Visual Studio 2013\Projects\ErichGame\WindowsGame1\WindowsGame1\obj\x86\Debug\WindowsGame1.pdb

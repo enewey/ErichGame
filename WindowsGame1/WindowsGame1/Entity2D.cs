@@ -11,11 +11,22 @@ using Microsoft.Xna.Framework.Media;
 
 namespace ErichGame
 {
-    abstract class Entity2D
+    class Entity2D
     {
+        public Entity2D(Vector2 pos)
+        {
+            this.pos = pos;
+        }
+
+        public Entity2D(int x, int y)
+        {
+            this.pos = new Vector2(x, y);
+        }
+
         protected Vector2 pos;
         public Vector2 getPosition() { return pos; }
         public void setPosition(Vector2 pos) { this.pos = pos; }
+        
         public void move(Vector2 move) {
             this.pos.X += move.X;
             this.pos.Y += move.Y;
